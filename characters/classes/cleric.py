@@ -1,11 +1,11 @@
+import dice
 import restrictions
 from characters import abilityscores
+from characters import specialabilities
 from characters.classes import Level, LevelTable
 from characters.classes.base import CharacterClass
-from characters import specialabilities
 from characters.savingthrows import SavingThrowSet
 from items import weapons
-import dice
 from spells import SpellSlotSet
 
 
