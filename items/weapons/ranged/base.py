@@ -7,3 +7,7 @@ class RangedWeapon(Weapon):
 
 class Longbow(RangedWeapon):
     pass
+
+
+class Sling(RangedWeapon):
+    pass

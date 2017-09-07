@@ -1,3 +1,4 @@
+from characters.specialabilities.classabilities import DivineCaster, TurnUndead
 from characters.specialabilities.combat import (
     ExperienceBonus, InitiativeBonus, MeleeDefenseBonus, RangedWeaponAccuracyBonus
 )
