@@ -9,6 +9,14 @@ class Club(MeleeWeapon):
     pass
 
 
+class Cudgel(MeleeWeapon):
+    pass
+
+
+class Dagger(MeleeWeapon):
+    pass
+
+
 class Mace(MeleeWeapon):
     pass
 
@@ -30,6 +38,10 @@ class Sword(MeleeWeapon):
 
 
 class TwoHandedSword(MeleeWeapon):
+    pass
+
+
+class WalkingStaff(MeleeWeapon):
     pass
 
 
