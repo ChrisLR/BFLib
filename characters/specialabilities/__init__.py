@@ -10,3 +10,5 @@ from characters.specialabilities.immunities import GhoulParalysisImmunity
 from characters.specialabilities.resistances import SurpriseResistance
 from characters.specialabilities.set import SpecialAbilitySet
 from characters.specialabilities.stealth import HalflingHide
+from characters.specialabilities.thief import ClimbWalls, Hide, Listen, OpenLock, \
+    MoveSilently, PickPockets, RemoveTraps
