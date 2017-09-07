@@ -1,4 +1,4 @@
-from abilityscores.base import Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma
+from characters.abilityscores import Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma
 
 
 class AbilityScoreSet(object):
