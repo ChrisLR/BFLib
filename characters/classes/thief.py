@@ -38,11 +38,11 @@ class Thief(CharacterClass):
                 experience_required=0,
                 hit_dice=dice.D4(1),
                 saving_throws_set=SavingThrowSet(
-                    death_poison=11,
+                    death_poison=13,
                     dragon_breath=16,
-                    paralysis_stone=14,
+                    paralysis_stone=13,
                     spells=15,
-                    wands=12
+                    wands=14
                 )
             ),
             Level(
@@ -51,13 +51,12 @@ class Thief(CharacterClass):
                 experience_required=1500,
                 hit_dice=dice.D4(2),
                 saving_throws_set=SavingThrowSet(
-                    death_poison=10,
+                    death_poison=12,
                     dragon_breath=15,
-                    paralysis_stone=13,
+                    paralysis_stone=12,
                     spells=14,
-                    wands=11
-                ),
-                spell_slots_set=SpellSlotSet(level_1=1)
+                    wands=14
+                )
             ),
             Level(
                 value=3,
@@ -65,13 +64,12 @@ class Thief(CharacterClass):
                 experience_required=3000,
                 hit_dice=dice.D4(3),
                 saving_throws_set=SavingThrowSet(
-                    death_poison=10,
+                    death_poison=12,
                     dragon_breath=15,
-                    paralysis_stone=13,
+                    paralysis_stone=12,
                     spells=14,
-                    wands=11
-                ),
-                spell_slots_set=SpellSlotSet(level_1=2)
+                    wands=14
+                )
             ),
             Level(
                 value=4,
@@ -79,13 +77,12 @@ class Thief(CharacterClass):
                 experience_required=6000,
                 hit_dice=dice.D4(4),
                 saving_throws_set=SavingThrowSet(
-                    death_poison=9,
-                    dragon_breath=15,
-                    paralysis_stone=13,
-                    spells=14,
-                    wands=10
-                ),
-                spell_slots_set=SpellSlotSet(level_1=2, level_2=1)
+                    death_poison=11,
+                    dragon_breath=14,
+                    paralysis_stone=12,
+                    spells=13,
+                    wands=13
+                )
             ),
             Level(
                 value=5,
@@ -93,13 +90,12 @@ class Thief(CharacterClass):
                 experience_required=12000,
                 hit_dice=dice.D4(5),
                 saving_throws_set=SavingThrowSet(
-                    death_poison=9,
-                    dragon_breath=15,
-                    paralysis_stone=13,
-                    spells=14,
-                    wands=10
-                ),
-                spell_slots_set=SpellSlotSet(level_1=2, level_2=2)
+                    death_poison=11,
+                    dragon_breath=14,
+                    paralysis_stone=12,
+                    spells=13,
+                    wands=13
+                )
             ),
             Level(
                 value=6,
@@ -107,13 +103,12 @@ class Thief(CharacterClass):
                 experience_required=24000,
                 hit_dice=dice.D4(6),
                 saving_throws_set=SavingThrowSet(
-                    death_poison=9,
-                    dragon_breath=14,
-                    paralysis_stone=12,
+                    death_poison=11,
+                    dragon_breath=13,
+                    paralysis_stone=11,
                     spells=13,
-                    wands=10
-                ),
-                spell_slots_set=SpellSlotSet(level_1=2, level_2=2, level_3=1)
+                    wands=13
+                )
             ),
             Level(
                 value=7,
@@ -121,13 +116,12 @@ class Thief(CharacterClass):
                 experience_required=48000,
                 hit_dice=dice.D4(7),
                 saving_throws_set=SavingThrowSet(
-                    death_poison=9,
-                    dragon_breath=14,
-                    paralysis_stone=12,
+                    death_poison=11,
+                    dragon_breath=13,
+                    paralysis_stone=11,
                     spells=13,
-                    wands=10
-                ),
-                spell_slots_set=SpellSlotSet(level_1=3, level_2=2, level_3=2)
+                    wands=13
+                )
             ),
             Level(
                 value=8,
@@ -135,13 +129,12 @@ class Thief(CharacterClass):
                 experience_required=90000,
                 hit_dice=dice.D4(8),
                 saving_throws_set=SavingThrowSet(
-                    death_poison=8,
-                    dragon_breath=14,
-                    paralysis_stone=12,
-                    spells=13,
-                    wands=9
-                ),
-                spell_slots_set=SpellSlotSet(level_1=3, level_2=2, level_3=2, level_4=1)
+                    death_poison=10,
+                    dragon_breath=12,
+                    paralysis_stone=11,
+                    spells=12,
+                    wands=12
+                )
             ),
             Level(
                 value=9,
@@ -149,13 +142,12 @@ class Thief(CharacterClass):
                 experience_required=180000,
                 hit_dice=dice.D4(9),
                 saving_throws_set=SavingThrowSet(
-                    death_poison=8,
-                    dragon_breath=14,
-                    paralysis_stone=12,
-                    spells=13,
-                    wands=9
-                ),
-                spell_slots_set=SpellSlotSet(level_1=3, level_2=3, level_3=2, level_4=2)
+                    death_poison=10,
+                    dragon_breath=12,
+                    paralysis_stone=11,
+                    spells=12,
+                    wands=12
+                )
             ),
             Level(
                 value=10,
@@ -164,13 +156,12 @@ class Thief(CharacterClass):
                 hit_dice=dice.D4(9),
                 hit_dice_flat_bonus=2,
                 saving_throws_set=SavingThrowSet(
-                    death_poison=8,
-                    dragon_breath=13,
-                    paralysis_stone=11,
-                    spells=12,
-                    wands=9
-                ),
-                spell_slots_set=SpellSlotSet(level_1=3, level_2=3, level_3=2, level_4=2, level_5=1)
+                    death_poison=9,
+                    dragon_breath=11,
+                    paralysis_stone=10,
+                    spells=11,
+                    wands=12
+                )
             ),
             Level(
                 value=11,
@@ -179,13 +170,12 @@ class Thief(CharacterClass):
                 hit_dice=dice.D4(9),
                 hit_dice_flat_bonus=4,
                 saving_throws_set=SavingThrowSet(
-                    death_poison=8,
-                    dragon_breath=13,
-                    paralysis_stone=11,
-                    spells=12,
-                    wands=9
-                ),
-                spell_slots_set=SpellSlotSet(level_1=4, level_2=3, level_3=3, level_4=2, level_5=2)
+                    death_poison=9,
+                    dragon_breath=11,
+                    paralysis_stone=10,
+                    spells=11,
+                    wands=12
+                )
             ),
             Level(
                 value=12,
@@ -194,13 +184,12 @@ class Thief(CharacterClass):
                 hit_dice=dice.D4(9),
                 hit_dice_flat_bonus=6,
                 saving_throws_set=SavingThrowSet(
-                    death_poison=7,
-                    dragon_breath=13,
-                    paralysis_stone=11,
-                    spells=12,
-                    wands=8
-                ),
-                spell_slots_set=SpellSlotSet(level_1=4, level_2=4, level_3=3, level_4=2, level_5=2, level_6=1)
+                    death_poison=9,
+                    dragon_breath=10,
+                    paralysis_stone=10,
+                    spells=11,
+                    wands=10
+                )
             ),
             Level(
                 value=13,
@@ -209,13 +198,12 @@ class Thief(CharacterClass):
                 hit_dice=dice.D4(9),
                 hit_dice_flat_bonus=8,
                 saving_throws_set=SavingThrowSet(
-                    death_poison=7,
-                    dragon_breath=13,
-                    paralysis_stone=11,
-                    spells=12,
-                    wands=8
-                ),
-                spell_slots_set=SpellSlotSet(level_1=4, level_2=4, level_3=3, level_4=3, level_5=2, level_6=2)
+                    death_poison=9,
+                    dragon_breath=10,
+                    paralysis_stone=10,
+                    spells=11,
+                    wands=10
+                )
             ),
             Level(
                 value=14,
@@ -224,13 +212,12 @@ class Thief(CharacterClass):
                 hit_dice=dice.D4(9),
                 hit_dice_flat_bonus=10,
                 saving_throws_set=SavingThrowSet(
-                    death_poison=7,
-                    dragon_breath=12,
-                    paralysis_stone=10,
-                    spells=11,
-                    wands=8
-                ),
-                spell_slots_set=SpellSlotSet(level_1=4, level_2=4, level_3=4, level_4=3, level_5=2, level_6=2)
+                    death_poison=8,
+                    dragon_breath=9,
+                    paralysis_stone=9,
+                    spells=10,
+                    wands=10
+                )
             ),
             Level(
                 value=15,
@@ -239,13 +226,12 @@ class Thief(CharacterClass):
                 hit_dice=dice.D4(9),
                 hit_dice_flat_bonus=12,
                 saving_throws_set=SavingThrowSet(
-                    death_poison=7,
-                    dragon_breath=12,
-                    paralysis_stone=10,
-                    spells=11,
-                    wands=8
-                ),
-                spell_slots_set=SpellSlotSet(level_1=4, level_2=4, level_3=4, level_4=3, level_5=3, level_6=2)
+                    death_poison=8,
+                    dragon_breath=9,
+                    paralysis_stone=9,
+                    spells=10,
+                    wands=10
+                )
             ),
             Level(
                 value=16,
@@ -254,13 +240,12 @@ class Thief(CharacterClass):
                 hit_dice=dice.D4(9),
                 hit_dice_flat_bonus=14,
                 saving_throws_set=SavingThrowSet(
-                    death_poison=6,
-                    dragon_breath=12,
-                    paralysis_stone=10,
-                    spells=11,
-                    wands=7
-                ),
-                spell_slots_set=SpellSlotSet(level_1=5, level_2=4, level_3=4, level_4=3, level_5=3, level_6=2)
+                    death_poison=7,
+                    dragon_breath=8,
+                    paralysis_stone=9,
+                    spells=9,
+                    wands=9
+                )
             ),
             Level(
                 value=17,
@@ -269,13 +254,12 @@ class Thief(CharacterClass):
                 hit_dice=dice.D4(9),
                 hit_dice_flat_bonus=16,
                 saving_throws_set=SavingThrowSet(
-                    death_poison=6,
-                    dragon_breath=12,
-                    paralysis_stone=10,
-                    spells=11,
-                    wands=7
-                ),
-                spell_slots_set=SpellSlotSet(level_1=5, level_2=5, level_3=4, level_4=3, level_5=3, level_6=2)
+                    death_poison=7,
+                    dragon_breath=8,
+                    paralysis_stone=9,
+                    spells=9,
+                    wands=9
+                )
             ),
             Level(
                 value=18,
@@ -284,13 +268,12 @@ class Thief(CharacterClass):
                 hit_dice=dice.D4(9),
                 hit_dice_flat_bonus=18,
                 saving_throws_set=SavingThrowSet(
-                    death_poison=6,
-                    dragon_breath=11,
-                    paralysis_stone=9,
-                    spells=10,
-                    wands=7
-                ),
-                spell_slots_set=SpellSlotSet(level_1=5, level_2=5, level_3=4, level_4=4, level_5=3, level_6=3)
+                    death_poison=7,
+                    dragon_breath=7,
+                    paralysis_stone=8,
+                    spells=9,
+                    wands=9
+                )
             ),
             Level(
                 value=19,
@@ -299,13 +282,12 @@ class Thief(CharacterClass):
                 hit_dice=dice.D4(9),
                 hit_dice_flat_bonus=20,
                 saving_throws_set=SavingThrowSet(
-                    death_poison=6,
-                    dragon_breath=11,
-                    paralysis_stone=9,
-                    spells=10,
-                    wands=7
-                ),
-                spell_slots_set=SpellSlotSet(level_1=6, level_2=5, level_3=4, level_4=4, level_5=3, level_6=3)
+                    death_poison=7,
+                    dragon_breath=7,
+                    paralysis_stone=8,
+                    spells=9,
+                    wands=9
+                )
             ),
             Level(
                 value=20,
@@ -314,13 +296,12 @@ class Thief(CharacterClass):
                 hit_dice=dice.D4(9),
                 hit_dice_flat_bonus=22,
                 saving_throws_set=SavingThrowSet(
-                    death_poison=5,
-                    dragon_breath=11,
-                    paralysis_stone=9,
-                    spells=10,
-                    wands=6
-                ),
-                spell_slots_set=SpellSlotSet(level_1=6, level_2=5, level_3=5, level_4=4, level_5=3, level_6=3)
+                    death_poison=6,
+                    dragon_breath=6,
+                    paralysis_stone=8,
+                    spells=8,
+                    wands=8
+                )
             )
         )
     )
