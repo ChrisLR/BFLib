@@ -4,6 +4,18 @@ from items.containers.base import SpecialContainer
 from keywords.items import WearLocation
 from sizes import Size
 from items import writing
+from items.ammunition.common import Arrow, Bolt
+
+
+class BoltCase(SpecialContainer):
+    name = "Bolt Case"
+
+    containable_items = Bolt,
+    max_quantity = 20
+    price = coins.Gold(1)
+    size = Size.Medium
+    weight = units.Pound(1)
+    wear_locations = WearLocation.Back
 
 
 class ScrollCase(SpecialContainer):
@@ -20,7 +32,7 @@ class ScrollCase(SpecialContainer):
 class Quiver(SpecialContainer):
     name = "Quiver"
 
-    containable_items = writing.Scroll, writing.Map
+    containable_items = Arrow,
     max_quantity = 20
     price = coins.Gold(1)
     size = Size.Medium

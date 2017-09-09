@@ -37,6 +37,16 @@ class LargeSack(Container):
     weight_limit = units.Pound(40)
 
 
+class Saddlebags(Container):
+    name = "Saddlebags"
+
+    price = coins.Gold(4)
+    size = Size.Small
+    volume_limit = units.CubicFeet(1)
+    weight = units.Pound(7)
+    weight_limit = units.Pound(10)
+
+
 class SmallBackpack(Container):
     name = "Small Backpack"
 

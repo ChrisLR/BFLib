@@ -8,6 +8,10 @@ class Arrow(Ammunition):
     pass
 
 
+class Bolt(Ammunition):
+    pass
+
+
 class ShortbowArrow(Arrow):
     name = "Shortbow Arrow"
 
