@@ -9,3 +9,7 @@ class VolumeUnit(Unit):
 
 class CubicFeet(VolumeUnit):
     pass
+
+
+class Litre(VolumeUnit):
+    pass

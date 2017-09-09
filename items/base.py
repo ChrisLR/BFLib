@@ -1,7 +1,6 @@
 import units
-from keywords.items import WearLocation
-from sizes import Size
 from items import coins
+from sizes import Size
 
 
 class Item(object):
@@ -9,5 +8,5 @@ class Item(object):
 
     price = coins.Copper
     size = Size.Medium
-    wear_location = WearLocation.none
+    wear_locations = tuple()
     weight = units.Pound
