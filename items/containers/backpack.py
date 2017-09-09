@@ -16,6 +16,17 @@ class Backpack(Container):
     weight_limit = units.Pound(40)
 
 
+class BeltPouch(Container):
+    name = "Belt Pouch"
+
+    price = coins.Gold(1)
+    size = Size.Small
+    volume_limit = units.CubicFeet(1)
+    wear_location = WearLocation.Waist
+    weight = units.Pound(0.1)
+    weight_limit = units.Pound(10)
+
+
 class SmallBackpack(Container):
     name = "Small Backpack"
 
