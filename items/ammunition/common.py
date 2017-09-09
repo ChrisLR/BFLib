@@ -12,6 +12,13 @@ class Bolt(Ammunition):
     pass
 
 
+class OilFlask(Ammunition):
+    name = "Oil Flask"
+
+    price = coins.Gold(1)
+    weight = units.Pound(1)
+
+
 class ShortbowArrow(Arrow):
     name = "Shortbow Arrow"
 

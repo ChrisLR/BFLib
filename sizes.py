@@ -5,3 +5,4 @@ class Size(Enum):
     Small = "Small"
     Medium = "Medium"
     Large = "Large"
+    Huge = "Huge"
