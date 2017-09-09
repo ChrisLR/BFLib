@@ -19,17 +19,9 @@ class Thief(CharacterClass):
             included=(armor.types.Clothing, armor.types.LightArmor)
         )
     )
-    special_abilities = specialabilities.SpecialAbilitySet(
-        special_abilities=(
-            specialabilities.ClimbWalls,
-            specialabilities.Hide,
-            specialabilities.Listen,
-            specialabilities.MoveSilently,
-            specialabilities.OpenLock,
-            specialabilities.RemoveTraps,
-            specialabilities.PickPockets,
-        )
-    )
+    special_abilities = specialabilities.SpecialAbilitySet((
+        specialabilities.SneakAttack
+    ))
     level_table = LevelTable(
         levels=(
             Level(
@@ -43,7 +35,16 @@ class Thief(CharacterClass):
                     paralysis_stone=13,
                     spells=15,
                     wands=14
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(80),
+                    specialabilities.Hide(10),
+                    specialabilities.Listen(30),
+                    specialabilities.MoveSilently(25),
+                    specialabilities.OpenLock(25),
+                    specialabilities.RemoveTraps(20),
+                    specialabilities.PickPockets(30),
+                ))
             ),
             Level(
                 value=2,
@@ -56,7 +57,16 @@ class Thief(CharacterClass):
                     paralysis_stone=12,
                     spells=14,
                     wands=14
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(81),
+                    specialabilities.Hide(15),
+                    specialabilities.Listen(34),
+                    specialabilities.MoveSilently(30),
+                    specialabilities.OpenLock(30),
+                    specialabilities.RemoveTraps(25),
+                    specialabilities.PickPockets(35),
+                ))
             ),
             Level(
                 value=3,
@@ -69,7 +79,16 @@ class Thief(CharacterClass):
                     paralysis_stone=12,
                     spells=14,
                     wands=14
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(82),
+                    specialabilities.Hide(20),
+                    specialabilities.Listen(38),
+                    specialabilities.MoveSilently(35),
+                    specialabilities.OpenLock(35),
+                    specialabilities.RemoveTraps(30),
+                    specialabilities.PickPockets(40),
+                ))
             ),
             Level(
                 value=4,
@@ -82,7 +101,16 @@ class Thief(CharacterClass):
                     paralysis_stone=12,
                     spells=13,
                     wands=13
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(83),
+                    specialabilities.Hide(25),
+                    specialabilities.Listen(42),
+                    specialabilities.MoveSilently(40),
+                    specialabilities.OpenLock(40),
+                    specialabilities.RemoveTraps(35),
+                    specialabilities.PickPockets(45),
+                ))
             ),
             Level(
                 value=5,
@@ -95,7 +123,16 @@ class Thief(CharacterClass):
                     paralysis_stone=12,
                     spells=13,
                     wands=13
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(84),
+                    specialabilities.Hide(30),
+                    specialabilities.Listen(46),
+                    specialabilities.MoveSilently(45),
+                    specialabilities.OpenLock(45),
+                    specialabilities.RemoveTraps(40),
+                    specialabilities.PickPockets(50),
+                ))
             ),
             Level(
                 value=6,
@@ -108,7 +145,16 @@ class Thief(CharacterClass):
                     paralysis_stone=11,
                     spells=13,
                     wands=13
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(85),
+                    specialabilities.Hide(35),
+                    specialabilities.Listen(50),
+                    specialabilities.MoveSilently(50),
+                    specialabilities.OpenLock(50),
+                    specialabilities.RemoveTraps(45),
+                    specialabilities.PickPockets(55),
+                ))
             ),
             Level(
                 value=7,
@@ -121,7 +167,16 @@ class Thief(CharacterClass):
                     paralysis_stone=11,
                     spells=13,
                     wands=13
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(86),
+                    specialabilities.Hide(40),
+                    specialabilities.Listen(54),
+                    specialabilities.MoveSilently(55),
+                    specialabilities.OpenLock(55),
+                    specialabilities.RemoveTraps(50),
+                    specialabilities.PickPockets(60),
+                ))
             ),
             Level(
                 value=8,
@@ -134,7 +189,16 @@ class Thief(CharacterClass):
                     paralysis_stone=11,
                     spells=12,
                     wands=12
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(87),
+                    specialabilities.Hide(45),
+                    specialabilities.Listen(58),
+                    specialabilities.MoveSilently(60),
+                    specialabilities.OpenLock(60),
+                    specialabilities.RemoveTraps(55),
+                    specialabilities.PickPockets(65),
+                ))
             ),
             Level(
                 value=9,
@@ -147,7 +211,16 @@ class Thief(CharacterClass):
                     paralysis_stone=11,
                     spells=12,
                     wands=12
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(88),
+                    specialabilities.Hide(50),
+                    specialabilities.Listen(62),
+                    specialabilities.MoveSilently(65),
+                    specialabilities.OpenLock(65),
+                    specialabilities.RemoveTraps(60),
+                    specialabilities.PickPockets(70),
+                ))
             ),
             Level(
                 value=10,
@@ -161,7 +234,16 @@ class Thief(CharacterClass):
                     paralysis_stone=10,
                     spells=11,
                     wands=12
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(89),
+                    specialabilities.Hide(53),
+                    specialabilities.Listen(65),
+                    specialabilities.MoveSilently(68),
+                    specialabilities.OpenLock(68),
+                    specialabilities.RemoveTraps(63),
+                    specialabilities.PickPockets(74),
+                ))
             ),
             Level(
                 value=11,
@@ -175,7 +257,16 @@ class Thief(CharacterClass):
                     paralysis_stone=10,
                     spells=11,
                     wands=12
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(90),
+                    specialabilities.Hide(56),
+                    specialabilities.Listen(68),
+                    specialabilities.MoveSilently(71),
+                    specialabilities.OpenLock(71),
+                    specialabilities.RemoveTraps(66),
+                    specialabilities.PickPockets(78),
+                ))
             ),
             Level(
                 value=12,
@@ -189,7 +280,16 @@ class Thief(CharacterClass):
                     paralysis_stone=10,
                     spells=11,
                     wands=10
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(91),
+                    specialabilities.Hide(59),
+                    specialabilities.Listen(71),
+                    specialabilities.MoveSilently(74),
+                    specialabilities.OpenLock(74),
+                    specialabilities.RemoveTraps(69),
+                    specialabilities.PickPockets(82),
+                ))
             ),
             Level(
                 value=13,
@@ -203,7 +303,16 @@ class Thief(CharacterClass):
                     paralysis_stone=10,
                     spells=11,
                     wands=10
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(92),
+                    specialabilities.Hide(62),
+                    specialabilities.Listen(74),
+                    specialabilities.MoveSilently(77),
+                    specialabilities.OpenLock(77),
+                    specialabilities.RemoveTraps(72),
+                    specialabilities.PickPockets(86),
+                ))
             ),
             Level(
                 value=14,
@@ -217,7 +326,16 @@ class Thief(CharacterClass):
                     paralysis_stone=9,
                     spells=10,
                     wands=10
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(93),
+                    specialabilities.Hide(65),
+                    specialabilities.Listen(77),
+                    specialabilities.MoveSilently(80),
+                    specialabilities.OpenLock(80),
+                    specialabilities.RemoveTraps(75),
+                    specialabilities.PickPockets(90),
+                ))
             ),
             Level(
                 value=15,
@@ -231,7 +349,16 @@ class Thief(CharacterClass):
                     paralysis_stone=9,
                     spells=10,
                     wands=10
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(94),
+                    specialabilities.Hide(68),
+                    specialabilities.Listen(80),
+                    specialabilities.MoveSilently(83),
+                    specialabilities.OpenLock(83),
+                    specialabilities.RemoveTraps(78),
+                    specialabilities.PickPockets(94),
+                ))
             ),
             Level(
                 value=16,
@@ -245,7 +372,16 @@ class Thief(CharacterClass):
                     paralysis_stone=9,
                     spells=9,
                     wands=9
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(95),
+                    specialabilities.Hide(69),
+                    specialabilities.Listen(83),
+                    specialabilities.MoveSilently(85),
+                    specialabilities.OpenLock(84),
+                    specialabilities.RemoveTraps(79),
+                    specialabilities.PickPockets(95),
+                ))
             ),
             Level(
                 value=17,
@@ -259,7 +395,16 @@ class Thief(CharacterClass):
                     paralysis_stone=9,
                     spells=9,
                     wands=9
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(96),
+                    specialabilities.Hide(70),
+                    specialabilities.Listen(86),
+                    specialabilities.MoveSilently(87),
+                    specialabilities.OpenLock(85),
+                    specialabilities.RemoveTraps(80),
+                    specialabilities.PickPockets(96),
+                ))
             ),
             Level(
                 value=18,
@@ -273,7 +418,16 @@ class Thief(CharacterClass):
                     paralysis_stone=8,
                     spells=9,
                     wands=9
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(97),
+                    specialabilities.Hide(71),
+                    specialabilities.Listen(89),
+                    specialabilities.MoveSilently(89),
+                    specialabilities.OpenLock(86),
+                    specialabilities.RemoveTraps(81),
+                    specialabilities.PickPockets(97),
+                ))
             ),
             Level(
                 value=19,
@@ -287,7 +441,16 @@ class Thief(CharacterClass):
                     paralysis_stone=8,
                     spells=9,
                     wands=9
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(98),
+                    specialabilities.Hide(72),
+                    specialabilities.Listen(92),
+                    specialabilities.MoveSilently(91),
+                    specialabilities.OpenLock(87),
+                    specialabilities.RemoveTraps(82),
+                    specialabilities.PickPockets(98),
+                ))
             ),
             Level(
                 value=20,
@@ -301,7 +464,16 @@ class Thief(CharacterClass):
                     paralysis_stone=8,
                     spells=8,
                     wands=8
-                )
+                ),
+                special_ability_set=specialabilities.SpecialAbilitySet((
+                    specialabilities.ClimbWalls(99),
+                    specialabilities.Hide(73),
+                    specialabilities.Listen(95),
+                    specialabilities.MoveSilently(93),
+                    specialabilities.OpenLock(88),
+                    specialabilities.RemoveTraps(83),
+                    specialabilities.PickPockets(99),
+                ))
             )
         )
     )
