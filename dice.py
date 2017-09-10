@@ -20,6 +20,10 @@ class D1(Dice):
     sides = 1
 
 
+class D2(Dice):
+    sides = 1
+
+
 class D4(Dice):
     sides = 4
 

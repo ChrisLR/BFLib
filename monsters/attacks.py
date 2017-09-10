@@ -28,6 +28,10 @@ class Claw(NaturalAttack):
     name = "Claw"
 
 
+class Hoof(NaturalAttack):
+    name = "Hoof"
+
+
 class AttackSet(object):
     __slots__ = ["amount", "attack", "special_properties"]
 
