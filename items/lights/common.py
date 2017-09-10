@@ -1,4 +1,5 @@
 import dice
+import items.weapons.throwing.common
 import units
 from items.lights.base import LightItem
 from shapes import Shape
@@ -10,7 +11,7 @@ class Lantern(LightItem):
 
     bright_light_radius = units.Feet(30)
     dim_light_radius = units.Feet(20)
-    fuel = ammunition.OilFlask
+    fuel = items.weapons.throwing.common.OilFlask
     fuel_duration = units.GameTurn(18)
     last_life_dice = dice.D6(1)
     light_shape = Shape.Circle
@@ -24,6 +25,19 @@ class BullseyeLantern(Lantern):
     light_shape = Shape.Cone
     price = coins.Gold(14)
     weight = units.Pound(3)
+
+
+class Candle(LightItem):
+    name = "Torch"
+
+    bright_light_radius = units.Feet(5)
+    dim_light_radius = units.Feet(5)
+    fuel = None
+    fuel_duration = units.GameTurn(4)
+    last_life_dice = dice.D4(1)
+    light_shape = Shape.Circle
+    price = coins.Copper(10)
+    weight = units.Pound(0.1)
 
 
 class HoodedLantern(Lantern):
