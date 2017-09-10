@@ -1,29 +1,38 @@
 from characters.specialabilities.base import SpecialAbility
 
 
-class ClimbWalls(SpecialAbility):
+class ThiefAbility(SpecialAbility):
+    def __init__(self, value):
+        self.value = value
+
+
+class ClimbWalls(ThiefAbility):
     pass
 
 
-class Hide(SpecialAbility):
+class Hide(ThiefAbility):
     pass
 
 
-class Listen(SpecialAbility):
+class Listen(ThiefAbility):
     pass
 
 
-class MoveSilently(SpecialAbility):
+class MoveSilently(ThiefAbility):
     pass
 
 
-class OpenLock(SpecialAbility):
+class OpenLock(ThiefAbility):
     pass
 
 
-class PickPockets(SpecialAbility):
+class PickPockets(ThiefAbility):
     pass
 
 
-class RemoveTraps(SpecialAbility):
+class RemoveTraps(ThiefAbility):
+    pass
+
+
+class SneakAttack(ThiefAbility):
     pass
