@@ -1,20 +1,21 @@
 import units
+from items.base import Item
 from items import coins
-from items.armor.base import Clothing
-from keywords.items import WearLocation
+from items import components
+from items.components.wearable import WearableSet, WearLocation
 
 
-class Cloak(Clothing):
+class Cloak(Item):
     name = "Cloak"
 
     price = coins.Gold(2)
-    wear_locations = WearLocation.Back,
+    wearable = components.Wearable(WearableSet(WearLocation.Neck, WearLocation.Back))
     weight = units.Pound(1)
 
 
-class CommonOutfit(Clothing):
+class CommonOutfit(Item):
     name = "Common Outfit"
 
-    wear_locations = (WearLocation.Torso, WearLocation.Legs, WearLocation.Feet, WearLocation.Arms),
+    wearable = components.Wearable(WearableSet(WearLocation.Neck, WearLocation.Back))
     price = coins.Gold(4)
     weight = units.Pound(1)
