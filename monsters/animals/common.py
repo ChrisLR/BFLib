@@ -6,12 +6,12 @@ from characters.classes.fighter import Fighter
 from monsters import attacks
 from monsters.animals.base import Animal
 from monsters.appearingset import AppearingSet
-from tables.attackbonus import HitDiceAttackBonusTable
+from tables.attackbonus import AttackBonusTable
 
 
 class Camel(Animal):
     name = "Camel"
-    attack_bonus = HitDiceAttackBonusTable.get(2)
+    attack_bonus = AttackBonusTable.get_by_hit_dice(2)
     attack_sets = [attacks.AttackSet(attacks.Bite(dice.D1(1))), attacks.AttackSet(attacks.Hoof(dice.D4(1)))]
     base_armor_class = 13
     carry_capacity = CarryCapacity(units.Pound(400), units.Pound(800))
@@ -27,7 +27,7 @@ class Camel(Animal):
 
 class Donkey(Animal):
     name = "Donkey"
-    attack_bonus = HitDiceAttackBonusTable.get(2)
+    attack_bonus = AttackBonusTable.get_by_hit_dice(2)
     attack_sets = [attacks.AttackSet(attacks.Bite(dice.D2(1)))]
     base_armor_class = 13
     carry_capacity = CarryCapacity(units.Pound(400), units.Pound(800))

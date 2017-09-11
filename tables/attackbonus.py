@@ -1,4 +1,4 @@
-class HitDiceAttackBonusTable(object):
+class AttackBonusTable(object):
     inner_table = {
         1: 1,
         2: 2,
@@ -34,7 +34,7 @@ class HitDiceAttackBonusTable(object):
     }
 
     @classmethod
-    def get(cls, hit_dice_value):
+    def get_by_hit_dice(cls, hit_dice_value):
         if hit_dice_value < 1:
             return 0
         if hit_dice_value > 31:

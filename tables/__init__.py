@@ -1,1 +1,1 @@
-from tables.attackbonus import HitDiceAttackBonusTable
+from tables.attackbonus import AttackBonusTable
