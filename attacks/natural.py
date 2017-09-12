@@ -13,6 +13,10 @@ class Crush(NaturalAttack):
     name = "Crush"
 
 
+class Confuse(NaturalAttack):
+    name = "Confuse"
+
+
 class Gaze(NaturalAttack):
     name = "Gaze"
 

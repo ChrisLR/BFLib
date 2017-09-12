@@ -48,3 +48,7 @@ class D12(Dice):
 
 class D20(Dice):
     sides = 20
+
+
+class D100(Dice):
+    sides = 100

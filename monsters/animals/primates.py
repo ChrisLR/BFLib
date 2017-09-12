@@ -1,8 +1,7 @@
 import dice
 import movement
 import units
-from attacks import AttackChain, AttackSet, Claw, Hoof, Headbutt
-from carrycapacity import CarryCapacity
+from attacks import AttackSet, Claw
 from characters.classes.fighter import Fighter
 from monsters.animals.base import Animal
 from monsters.appearingset import AppearingSet
