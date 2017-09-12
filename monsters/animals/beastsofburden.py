@@ -1,9 +1,9 @@
 import dice
 import movement
 import units
+from attacks import AttackChain, AttackSet, Bite, Hoof
 from carrycapacity import CarryCapacity
 from characters.classes.fighter import Fighter
-from monsters import attacks
 from monsters.animals.base import Animal
 from monsters.appearingset import AppearingSet
 from tables.attackbonus import AttackBonusTable
@@ -12,7 +12,7 @@ from tables.attackbonus import AttackBonusTable
 class Camel(Animal):
     name = "Camel"
     attack_bonus = AttackBonusTable.get_by_hit_dice(2)
-    attack_sets = [attacks.AttackSet(attacks.Bite(dice.D1(1))), attacks.AttackSet(attacks.Hoof(dice.D4(1)))]
+    attack_sets = [AttackChain(AttackSet(Bite(dice.D1(1))), AttackSet(Hoof(dice.D4(1))))]
     base_armor_class = 13
     carry_capacity = CarryCapacity(units.Pound(400), units.Pound(800))
     hit_dice = dice.D8(2)
@@ -28,7 +28,7 @@ class Camel(Animal):
 class Donkey(Animal):
     name = "Donkey"
     attack_bonus = AttackBonusTable.get_by_hit_dice(2)
-    attack_sets = [attacks.AttackSet(attacks.Bite(dice.D2(1)))]
+    attack_sets = [AttackSet(Bite(dice.D2(1)))]
     base_armor_class = 13
     carry_capacity = CarryCapacity(units.Pound(400), units.Pound(800))
     hit_dice = dice.D8(2)
@@ -44,7 +44,7 @@ class Donkey(Animal):
 class DraftHorse(Animal):
     name = "Draft Horse"
     attack_bonus = AttackBonusTable.get_by_hit_dice(3)
-    attack_sets = [attacks.AttackSet(attacks.Hoof(dice.D4(1)), amount=2)]
+    attack_sets = [AttackSet(Hoof(dice.D4(1)), amount=2)]
     base_armor_class = 13
     carry_capacity = CarryCapacity(units.Pound(350), units.Pound(700))
     hit_dice = dice.D8(3)
@@ -60,7 +60,7 @@ class DraftHorse(Animal):
 class Mule(Animal):
     name = "Mule"
     attack_bonus = AttackBonusTable.get_by_hit_dice(2)
-    attack_sets = [attacks.AttackSet(attacks.Hoof(dice.D4(1))), attacks.AttackSet(attacks.Bite(dice.D2(1)))]
+    attack_sets = [AttackSet(Hoof(dice.D4(1))), AttackSet(Bite(dice.D2(1)))]
     base_armor_class = 13
     carry_capacity = CarryCapacity(units.Pound(300), units.Pound(600))
     hit_dice = dice.D8(2)
@@ -73,10 +73,26 @@ class Mule(Animal):
     xp = 75
 
 
+class Pony(Animal):
+    name = "Pony"
+    attack_bonus = AttackBonusTable.get_by_hit_dice(1)
+    attack_sets = [AttackSet(AttackSet(Bite(dice.D4(1))))]
+    base_armor_class = 13
+    carry_capacity = CarryCapacity(units.Pound(275), units.Pound(550))
+    hit_dice = dice.D8(2)
+    morale = 6
+    movement = movement.MovementSet(walk=units.FeetPerGameTurn(40), turning_distance=units.Feet(10))
+    no_appearing = None
+    save_as = Fighter.level_table.levels[1].saving_throws_set
+    special_abilities = None
+    treasure_type = None
+    xp = 25
+
+
 class RidingHorse(Animal):
     name = "Riding Horse"
     attack_bonus = AttackBonusTable.get_by_hit_dice(2)
-    attack_sets = [attacks.AttackSet(attacks.Hoof(dice.D4(1)), amount=2)]
+    attack_sets = [AttackSet(Hoof(dice.D4(1)), amount=2)]
     base_armor_class = 13
     carry_capacity = CarryCapacity(units.Pound(250), units.Pound(500))
     hit_dice = dice.D8(2)
@@ -92,7 +108,7 @@ class RidingHorse(Animal):
 class WarHorse(Animal):
     name = "War Horse"
     attack_bonus = AttackBonusTable.get_by_hit_dice(3)
-    attack_sets = [attacks.AttackSet(attacks.Hoof(dice.D6(1)), amount=2)]
+    attack_sets = [AttackSet(Hoof(dice.D6(1)), amount=2)]
     base_armor_class = 13
     carry_capacity = CarryCapacity(units.Pound(250), units.Pound(500))
     hit_dice = dice.D8(3)
@@ -104,3 +120,18 @@ class WarHorse(Animal):
     treasure_type = None
     xp = 145
 
+
+class WarPony(Animal):
+    name = "War Pony"
+    attack_bonus = AttackBonusTable.get_by_hit_dice(1)
+    attack_sets = [AttackSet(AttackSet(Bite(dice.D4(1))))]
+    base_armor_class = 13
+    carry_capacity = CarryCapacity(units.Pound(275), units.Pound(550))
+    hit_dice = dice.D8(2)
+    morale = 9
+    movement = movement.MovementSet(walk=units.FeetPerGameTurn(40), turning_distance=units.Feet(10))
+    no_appearing = None
+    save_as = Fighter.level_table.levels[1].saving_throws_set
+    special_abilities = None
+    treasure_type = None
+    xp = 25
