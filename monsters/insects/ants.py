@@ -15,7 +15,7 @@ class GiantAnt(Insect):
     hit_dice = dice.D8(4)
 
     attack_bonus = AttackBonusTable.get_by_hit_dice(hit_dice.amount)
-    attack_sets = [AttackSet(AttackSet(Bite(dice.D6(2))))]
+    attack_sets = [AttackSet(Bite(dice.D6(2)))]
     base_armor_class = 17
     morale = 7
     movement = movement.MovementSet(walk=units.FeetPerGameTurn(60), turning_distance=units.Feet(10))

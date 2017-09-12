@@ -76,7 +76,7 @@ class Mule(Animal):
 class Pony(Animal):
     name = "Pony"
     attack_bonus = AttackBonusTable.get_by_hit_dice(1)
-    attack_sets = [AttackSet(AttackSet(Bite(dice.D4(1))))]
+    attack_sets = [AttackSet(Bite(dice.D4(1)))]
     base_armor_class = 13
     carry_capacity = CarryCapacity(units.Pound(275), units.Pound(550))
     hit_dice = dice.D8(2)
@@ -124,7 +124,7 @@ class WarHorse(Animal):
 class WarPony(Animal):
     name = "War Pony"
     attack_bonus = AttackBonusTable.get_by_hit_dice(1)
-    attack_sets = [AttackSet(AttackSet(Bite(dice.D4(1))))]
+    attack_sets = [AttackSet(Bite(dice.D4(1)))]
     base_armor_class = 13
     carry_capacity = CarryCapacity(units.Pound(275), units.Pound(550))
     hit_dice = dice.D8(2)

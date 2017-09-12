@@ -4,16 +4,18 @@ import random
 
 class Dice(object):
     __metaclass__ = abc.ABCMeta
+    __slots__ = ["amount", "flat_bonus"]
 
     @abc.abstractclassmethod
     def sides(self):
         pass
 
-    def __init__(self, amount):
+    def __init__(self, amount, flat_bonus=0):
         self.amount = amount
+        self.flat_bonus = flat_bonus
 
     def roll(self):
-        return sum((random.randint(1, self.sides) for _ in range(0, self.amount)))
+        return sum((random.randint(1, self.sides) for _ in range(0, self.amount))) + self.flat_bonus
 
 
 class D1(Dice):

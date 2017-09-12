@@ -9,6 +9,14 @@ class Claw(NaturalAttack):
     name = "Claw"
 
 
+class Crush(NaturalAttack):
+    name = "Crush"
+
+
+class Gaze(NaturalAttack):
+    name = "Gaze"
+
+
 class Headbutt(NaturalAttack):
     name = "Headbutt"
 
