@@ -1,2 +1,2 @@
-from attacks.natural import Bite, Claw, Hoof
+from attacks.natural import Bite, Claw, Headbutt, Hoof
 from attacks.set import AttackChain, AttackSet
