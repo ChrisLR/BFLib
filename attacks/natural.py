@@ -10,10 +10,11 @@ class Claw(NaturalAttack):
 
 
 class Crush(NaturalAttack):
+    """ Crush requires Grapple Hold"""
     name = "Crush"
 
 
-class Confuse(NaturalAttack):
+class ConfusionBySwarm(NaturalAttack):
     name = "Confuse"
 
 

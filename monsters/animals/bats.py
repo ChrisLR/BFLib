@@ -1,7 +1,7 @@
 import dice
 import movement
 import units
-from attacks import AttackSet, Bite, Confuse
+from attacks import AttackSet, Bite, ConfusionBySwarm
 from characters.classes.fighter import Fighter
 from monsters.animals.base import Animal
 from monsters.appearingset import AppearingSet
@@ -12,7 +12,7 @@ class Bat(Animal):
     name = "Bat"
     hit_dice = dice.D1(1)
     attack_bonus = AttackBonusTable.get_by_hit_dice(0)
-    attack_sets = [AttackSet(Confuse(None))]
+    attack_sets = [AttackSet(ConfusionBySwarm(None))]
     base_armor_class = 14
 
     morale = 7
