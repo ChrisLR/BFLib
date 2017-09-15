@@ -1,5 +1,5 @@
 from bflib import restrictions
-from bflib.characters.classes import LevelTable
+from bflib.characters.classes.level import LevelTable
 from bflib.characters.specialabilities import SpecialAbilitySet
 
 
