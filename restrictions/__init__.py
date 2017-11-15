@@ -1,6 +1,0 @@
-from restrictions.abilityscore import AbilityScoreRestrictionSet
-from restrictions.armor import ArmorRestrictionSet
-from restrictions.classes import ClassRestrictionSet
-from restrictions.hitdice import HitDiceMaxSizeRestriction
-from restrictions.set import RestrictionSet
-from restrictions.weapons import WeaponRestrictionSet, WeaponSizeRestrictionSet
